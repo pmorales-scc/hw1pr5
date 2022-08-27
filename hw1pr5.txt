@@ -1,0 +1,74 @@
+// CSCI 1550: HW 1, Problem 5 
+// Filename: hw1pr5.txt 
+// Name: Peter Morales
+//
+// Example Exercise #0: Calculating the force given the spring constant and the displacement.
+float k
+float delta_x
+float F
+k = 10.0
+// the spring constant, say, measured in N/cm
+delta_x = 4.2 
+// the displacement, say, measured in cm
+F = k*delta_x 
+// this is the resulting force, measured in N
+
+
+
+// Exercise #1
+// CSCI 1550: HW 1, Problem 5 
+// Filename: hw1pr5.txt 
+// Name: Peter Morales
+//
+// Vertical position of a projectile
+
+float y_i
+float y_f
+float v_i
+float a_y
+integer t
+
+// initial height (m)
+y_i = 0 
+// initial velocity (m/s)
+v_i = 23.2
+// downward force of gravity (m/s^2)
+a_y = -9.8
+//time (seconds)
+t = 5
+
+// height at t seconds
+y_f = y_i + (v_i*t) + (1.0/2.0*a_y*t*t)
+
+Put y_f to output
+
+
+
+// Exercise #3
+//
+// Since P=F I just used P alone instead of
+// adding a redundant F variable
+
+// declaring variables
+integer P
+integer N
+integer F_max
+integer F_k
+float f_static
+float f_kinetic
+
+// initializing variables 
+P = Get next input
+N = 500
+f_static = 0.3
+f_kinetic = 0.2
+
+// static and kenetic friction values
+F_max = f_static*N
+F_k = f_kinetic*N
+
+//determine if static or kinetic
+if F_max > P
+   Put P to output
+elseif F_max < P
+   Put F_k to output
